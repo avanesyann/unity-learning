@@ -10,4 +10,5 @@ The primary purpose is to ensure that game logic, particularly movement and anim
 ### Example
 
 Consider moving an object at a speed of 5 units per second. Instead of directly adding 5 units to its position in Update(), which would make it move much faster at higher frame rates, one would multiply the speed by Time.deltaTime.
+
 `transform.Translate(Vector3.forward * 5f * Time.deltaTime);`

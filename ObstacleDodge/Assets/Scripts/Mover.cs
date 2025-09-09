@@ -4,21 +4,23 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
     }
 
-    // Update is called once per frame
     void Update()
     {
         // instead of handling x, y, z separately, we could (and should) work with a Vector3
         // Unity's API is built around vectors
 
-        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
-        float yValue = 0f;
-        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        // float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        // float yValue = 0f;
+        // float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
-        transform.Translate(xValue, yValue, zValue);
+        // transform.Translate(xValue, yValue, zValue);
+
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+
+        transform.Translate(movement * moveSpeed * Time.deltaTime);
     }
 }
