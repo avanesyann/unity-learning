@@ -1,7 +1,7 @@
-## :blue_book: A collection of Unity tutorial projects built while following tutorials. 
+## :blue_book: Unity Learning Collection
 
-This repository contains my personal learning journey through the tutorials. 
+This repository documents my journey of learning Unity through hands-on projects, experiments, and exploring different game development concepts.
 
 ## :file_folder: Structure
 
-All content is organized under the `unity-learning` folder.
+All projects and related content are organized under the `unity-learning` folder.
