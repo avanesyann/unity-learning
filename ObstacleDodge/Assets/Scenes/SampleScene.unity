@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 2039721028}
   - component: {fileID: 2039721027}
   - component: {fileID: 2039721026}
+  - component: {fileID: 2039721030}
   m_Layer: 0
   m_Name: Rocky
   m_TagString: Untagged
@@ -657,6 +658,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039721030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039721025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d94d2f678b2a040acb3e86e321e466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mover
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
