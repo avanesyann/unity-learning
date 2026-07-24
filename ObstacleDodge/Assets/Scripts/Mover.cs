@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    float moveX = 0f;
-    float moveY = 0.01f;
-    float moveZ = 0f;
+    [SerializeField] float moveX = 0f;
+    [SerializeField] float moveY = 0.01f;
+    [SerializeField] float moveZ = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
