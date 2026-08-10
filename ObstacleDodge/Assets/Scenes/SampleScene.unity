@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 188522612}
   - component: {fileID: 188522611}
   - component: {fileID: 188522610}
+  - component: {fileID: 188522614}
   m_Layer: 0
   m_Name: Cube (21)
   m_TagString: Untagged
@@ -895,6 +896,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188522608}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &188522614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188522608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: 0.1
 --- !u!1 &210267740
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,11 +949,9 @@ Transform:
   - {fileID: 77312023}
   - {fileID: 367100109}
   - {fileID: 849924264}
-  - {fileID: 2042143572}
   - {fileID: 1655801935}
   - {fileID: 592646118}
   - {fileID: 1291983126}
-  - {fileID: 1574661547}
   - {fileID: 1526042039}
   - {fileID: 1147185250}
   - {fileID: 188522609}
@@ -949,6 +963,8 @@ Transform:
   - {fileID: 802772712}
   - {fileID: 498169186}
   - {fileID: 1746985856}
+  - {fileID: 1574661547}
+  - {fileID: 2042143572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288355617
@@ -1791,6 +1807,7 @@ GameObject:
   - component: {fileID: 592646121}
   - component: {fileID: 592646120}
   - component: {fileID: 592646119}
+  - component: {fileID: 592646123}
   m_Layer: 0
   m_Name: Cube (20)
   m_TagString: Untagged
@@ -1903,6 +1920,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592646117}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &592646123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592646117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: 0.1
 --- !u!1 &683184561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,8 +2456,9 @@ GameObject:
   - component: {fileID: 849924262}
   - component: {fileID: 849924261}
   - component: {fileID: 849924265}
+  - component: {fileID: 849924266}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: SpinWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2477,7 +2510,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 765217df0c982d8448ee78b7e33f90cd, type: 2}
+  - {fileID: 2100000, guid: acab436a43c23c04285aee32531e3910, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2536,6 +2569,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461671c6b04beb444bd3cb70296e804e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
+--- !u!114 &849924266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849924260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0.1
+  spinZ: 0
 --- !u!1 &898189109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2847,7 @@ GameObject:
   - component: {fileID: 1147185253}
   - component: {fileID: 1147185252}
   - component: {fileID: 1147185251}
+  - component: {fileID: 1147185255}
   m_Layer: 0
   m_Name: Cube (24)
   m_TagString: Untagged
@@ -2815,7 +2864,7 @@ Transform:
   m_GameObject: {fileID: 1147185249}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0.00000016093577, w: 0.00000015646218}
-  m_LocalPosition: {x: 6.09, y: 1.96, z: 7.13}
+  m_LocalPosition: {x: 6.09, y: 1.84, z: 7.13}
   m_LocalScale: {x: 1.1893061, y: 4.7632937, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2911,6 +2960,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147185249}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1147185255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147185249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0.1
+  spinZ: 0
 --- !u!1 &1206692136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,6 +3155,7 @@ GameObject:
   - component: {fileID: 1291983129}
   - component: {fileID: 1291983128}
   - component: {fileID: 1291983127}
+  - component: {fileID: 1291983131}
   m_Layer: 0
   m_Name: Cube (22)
   m_TagString: Untagged
@@ -3203,6 +3268,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291983125}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1291983131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291983125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: -0.1
 --- !u!1 &1419280146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,6 +3296,7 @@ GameObject:
   - component: {fileID: 1419280150}
   - component: {fileID: 1419280149}
   - component: {fileID: 1419280148}
+  - component: {fileID: 1419280152}
   m_Layer: 0
   m_Name: Cube (23)
   m_TagString: Untagged
@@ -3328,6 +3409,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419280146}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1419280152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419280146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: -0.1
 --- !u!1 &1526042038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,6 +3437,7 @@ GameObject:
   - component: {fileID: 1526042042}
   - component: {fileID: 1526042041}
   - component: {fileID: 1526042040}
+  - component: {fileID: 1526042044}
   m_Layer: 0
   m_Name: Cube (19)
   m_TagString: Untagged
@@ -3453,6 +3550,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526042038}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1526042044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526042038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: -0.1
 --- !u!1 &1574661546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,6 +3578,7 @@ GameObject:
   - component: {fileID: 1574661550}
   - component: {fileID: 1574661549}
   - component: {fileID: 1574661548}
+  - component: {fileID: 1574661552}
   m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Untagged
@@ -3481,9 +3594,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574661546}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.49999985, y: 0.5, z: 0.5, w: 0.50000024}
+  m_LocalRotation: {x: 0.49999985, y: 0.5, z: 0.5, w: 0.5000003}
   m_LocalPosition: {x: -3.62, y: 2.85, z: 9.92}
-  m_LocalScale: {x: 1.1893061, y: 4.4831, z: 1}
+  m_LocalScale: {x: 1.1893064, y: 4.4831004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210267741}
@@ -3578,6 +3691,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574661546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1574661552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574661546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: 0.1
 --- !u!1 &1655801934
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3719,7 @@ GameObject:
   - component: {fileID: 1655801938}
   - component: {fileID: 1655801937}
   - component: {fileID: 1655801936}
+  - component: {fileID: 1655801940}
   m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
@@ -3703,6 +3832,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655801934}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1655801940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655801934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: -0.1
 --- !u!1 &1746985855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4361,7 @@ GameObject:
   - component: {fileID: 2042143574}
   - component: {fileID: 2042143573}
   - component: {fileID: 2042143576}
+  - component: {fileID: 2042143577}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -4234,7 +4379,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.70710665, z: -0, w: 0.707107}
   m_LocalPosition: {x: -3.62, y: 2.85, z: 9.92}
-  m_LocalScale: {x: 1.1893061, y: 4.4831, z: 1}
+  m_LocalScale: {x: 1.1893064, y: 4.4831, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210267741}
@@ -4329,6 +4474,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461671c6b04beb444bd3cb70296e804e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectHit
+--- !u!114 &2042143577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042143571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
