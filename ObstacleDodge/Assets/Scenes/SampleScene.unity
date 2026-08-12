@@ -1809,6 +1809,7 @@ GameObject:
   - component: {fileID: 559726246}
   - component: {fileID: 559726245}
   - component: {fileID: 559726244}
+  - component: {fileID: 559726248}
   m_Layer: 0
   m_Name: Cube (27)
   m_TagString: Untagged
@@ -1824,13 +1825,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559726242}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000104308114, y: -0.00000013060514, z: -0.00000046509197, w: 1}
+  m_LocalRotation: {x: 0.00000014634855, y: -0.00000008074647, z: -0.38268363, w: 0.9238795}
   m_LocalPosition: {x: 2.19, y: 2.12, z: -10.06}
   m_LocalScale: {x: 0.5, y: 4.0595202, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210267741}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!114 &559726244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559726242}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &559726248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559726242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: -0.1
 --- !u!1 &592646117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2383,7 @@ GameObject:
   - component: {fileID: 710964670}
   - component: {fileID: 710964669}
   - component: {fileID: 710964668}
+  - component: {fileID: 710964672}
   m_Layer: 0
   m_Name: Cube (26)
   m_TagString: Untagged
@@ -2479,6 +2496,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710964665}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &710964672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710964665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3319d414ff055e4597d38754a62dd40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spinner
+  spinX: 0
+  spinY: 0
+  spinZ: 0.1
 --- !u!1 &802772711
 GameObject:
   m_ObjectHideFlags: 0
