@@ -15,6 +15,22 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveToPlayer();
+
+        DestroyOnReach();
+    }
+
+
+    void DestroyOnReach()
+    {
+        if (transform.position == playerPosition)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void MoveToPlayer()
+    {
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, projectileSpeed * Time.deltaTime);
     }
 }
