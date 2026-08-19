@@ -1214,6 +1214,7 @@ GameObject:
   - component: {fileID: 307607324}
   - component: {fileID: 307607323}
   - component: {fileID: 307607322}
+  - component: {fileID: 307607326}
   m_Layer: 0
   m_Name: TriggerObstacle
   m_TagString: Untagged
@@ -1308,12 +1309,25 @@ Transform:
   m_GameObject: {fileID: 307607321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.17, y: 0.44000006, z: -10.09}
-  m_LocalScale: {x: 1, y: 0.49958, z: 3.257}
+  m_LocalPosition: {x: 5.22, y: 0.29, z: -10.09}
+  m_LocalScale: {x: 1.2258, y: 0.49958, z: 3.257}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1951606271}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307607326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307607321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e3c26e036d48e44925c2b250a86f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerProjectile
+  spinner: {fileID: 710964665}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,7 +2751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &710964666
 Transform:
   m_ObjectHideFlags: 0
@@ -3785,6 +3799,7 @@ GameObject:
   - component: {fileID: 1268828850}
   - component: {fileID: 1268828849}
   - component: {fileID: 1268828848}
+  - component: {fileID: 1268828852}
   m_Layer: 0
   m_Name: TriggerObstacle (1)
   m_TagString: Untagged
@@ -3885,6 +3900,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1951606271}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1268828852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268828847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e3c26e036d48e44925c2b250a86f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerProjectile
+  spinner: {fileID: 0}
 --- !u!1 &1291983125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5153,8 +5181,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 307607325}
   - {fileID: 1268828851}
+  - {fileID: 307607325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039721025
