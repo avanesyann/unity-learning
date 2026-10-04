@@ -3060,7 +3060,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02777b0ed36413f489c74b5d5c1b2954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovePlayer
-  moveSpeed: 4
+  maxSpeed: 10
+  acceleration: 5
+  deceleration: 2
+  brakeDeceleration: 15
 --- !u!1 &1390775452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3355,7 @@ Transform:
   m_GameObject: {fileID: 1406966066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.473, y: 0.691, z: -2}
+  m_LocalPosition: {x: 1.51666, y: 1.43172, z: -2.29246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3483,6 +3486,7 @@ GameObject:
   - component: {fileID: 1505844396}
   - component: {fileID: 1505844395}
   - component: {fileID: 1505844394}
+  - component: {fileID: 1505844398}
   m_Layer: 0
   m_Name: Headlight (6)
   m_TagString: Untagged
@@ -3583,6 +3587,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1692761065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505844398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505844393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb69f02086d3434381fa72f3c78e2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Reverse
 --- !u!1 &1520955641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,6 +6055,7 @@ GameObject:
   - component: {fileID: 2122246231}
   - component: {fileID: 2122246230}
   - component: {fileID: 2122246229}
+  - component: {fileID: 2122246233}
   m_Layer: 0
   m_Name: Headlight (7)
   m_TagString: Untagged
@@ -6139,6 +6156,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1692761065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2122246233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122246228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb69f02086d3434381fa72f3c78e2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Reverse
 --- !u!1 &2131593406
 GameObject:
   m_ObjectHideFlags: 0

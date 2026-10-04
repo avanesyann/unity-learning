@@ -2,22 +2,37 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] public float moveSpeed = 4f;
+    [SerializeField] public float maxSpeed = 20f;
+    [SerializeField] public float acceleration = 10f;
+    [SerializeField] public float deceleration = 3f;
+    [SerializeField] public float brakeDeceleration = 15f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private float currentSpeed;
 
     // Update is called once per frame
     void Update()
     {
-        float moveX = Input.GetAxis("Vertical");
-        float moveZ = Input.GetAxis("Horizontal");
+        if (Input.GetKey(KeyCode.W))
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakeDeceleration * Time.deltaTime);
+        }
+        else
+        {
+            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.deltaTime);
+        }
 
-        Vector3 movement = new Vector3(moveX, 0f, -moveZ);
+        transform.Translate(Vector3.right * currentSpeed * Time.deltaTime, Space.Self);
 
-        transform.Translate(movement * moveSpeed * Time.deltaTime);
+
+        // float moveX = Input.GetAxis("Vertical");
+        // float moveZ = Input.GetAxis("Horizontal");
+
+        // Vector3 movement = new Vector3(moveX, 0f, -moveZ);
+
+        // transform.Translate(movement * moveSpeed * Time.deltaTime);
     }
 }
