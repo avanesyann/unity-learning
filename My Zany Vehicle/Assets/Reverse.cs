@@ -5,6 +5,8 @@ public class Reverse : MonoBehaviour
     private Renderer lightRenderer;
     private Color originalColor;
 
+    [SerializeField] private MovePlayer car;
+
     void Start()
     {
         lightRenderer = GetComponent<Renderer>();
@@ -14,7 +16,7 @@ public class Reverse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (car.currentSpeed < 0)
         {
             lightRenderer.material.color = Color.white;
         }

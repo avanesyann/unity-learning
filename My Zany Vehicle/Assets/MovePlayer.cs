@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] public float deceleration = 3f;
     [SerializeField] public float brakeDeceleration = 15f;
 
-    private float currentSpeed;
+    public float currentSpeed;
 
     // Update is called once per frame
     void Update()

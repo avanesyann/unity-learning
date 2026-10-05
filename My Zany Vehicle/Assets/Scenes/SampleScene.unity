@@ -3064,6 +3064,7 @@ MonoBehaviour:
   acceleration: 5
   deceleration: 2
   brakeDeceleration: 15
+  currentSpeed: 0
 --- !u!1 &1390775452
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,6 +3600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb69f02086d3434381fa72f3c78e2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Reverse
+  car: {fileID: 1376561120}
 --- !u!1 &1520955641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,6 +6170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb69f02086d3434381fa72f3c78e2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Reverse
+  car: {fileID: 1376561120}
 --- !u!1 &2131593406
 GameObject:
   m_ObjectHideFlags: 0
