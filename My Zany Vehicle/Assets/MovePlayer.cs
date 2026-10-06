@@ -14,11 +14,25 @@ public class MovePlayer : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
+            if (currentSpeed < 0)
+            {
+                currentSpeed = Mathf.MoveTowards(currentSpeed, 0, brakeDeceleration * Time.deltaTime);
+            }
+            else
+            {
+                currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
+            }
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakeDeceleration * Time.deltaTime);
+            if (currentSpeed > 0)
+            {
+                currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakeDeceleration * Time.deltaTime);
+            }
+            else
+            {
+                currentSpeed = Mathf.MoveTowards(currentSpeed, -maxSpeed, brakeDeceleration * Time.deltaTime);
+            }
         }
         else
         {
