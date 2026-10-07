@@ -2090,6 +2090,7 @@ GameObject:
   - component: {fileID: 833150873}
   - component: {fileID: 833150872}
   - component: {fileID: 833150871}
+  - component: {fileID: 833150875}
   m_Layer: 0
   m_Name: Headlight (2)
   m_TagString: Untagged
@@ -2190,6 +2191,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1692761065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833150875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833150870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e1c837b06aa11458f7f02804da7a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Braking
+  car: {fileID: 1376561120}
 --- !u!1 &872826533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,6 +4868,7 @@ GameObject:
   - component: {fileID: 1931068769}
   - component: {fileID: 1931068768}
   - component: {fileID: 1931068767}
+  - component: {fileID: 1931068771}
   m_Layer: 0
   m_Name: Headlight (3)
   m_TagString: Untagged
@@ -4954,6 +4969,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1692761065}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1931068771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931068766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e1c837b06aa11458f7f02804da7a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Braking
+  car: {fileID: 1376561120}
 --- !u!1 &1975776889
 GameObject:
   m_ObjectHideFlags: 0
