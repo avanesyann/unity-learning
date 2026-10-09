@@ -18,7 +18,7 @@ public class Braking : MonoBehaviour
     {
         if (car.currentSpeed > 0 && Input.GetKey(KeyCode.S))
         {
-            lightRenderer.material.color = Color.orangeRed;
+            lightRenderer.material.color = Color.softRed;
         }
         else
         {
