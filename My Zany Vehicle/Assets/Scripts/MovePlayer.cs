@@ -52,12 +52,5 @@ public class MovePlayer : MonoBehaviour
         transform.Translate(Vector3.right * currentSpeed * Time.deltaTime, Space.Self);
 
         transform.Translate(Vector3.forward * horizontalInput * 5f * Time.deltaTime, Space.Self);
-
-        // float moveX = Input.GetAxis("Vertical");
-        // float moveZ = Input.GetAxis("Horizontal");
-
-        // Vector3 movement = new Vector3(moveX, 0f, -moveZ);
-
-        // transform.Translate(movement * moveSpeed * Time.deltaTime);
     }
 }
