@@ -2,55 +2,103 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
-    [SerializeField] public float maxSpeed = 20f;
-    [SerializeField] public float acceleration = 10f;
-    [SerializeField] public float deceleration = 3f;
-    [SerializeField] public float brakeDeceleration = 15f;
-    [SerializeField] public float horizontalInput = 0f;
+    [Header("Speed")]
+    public float maxSpeed = 20f;
+    public float acceleration = 8f;
+    public float brakeDeceleration = 15f;
+    public float deceleration = 5f;
+    public float reverseSpeed = 8f;
+
+    [Header("Steering")]
+    public float steeringSpeed = 90f;
+    public float steeringSmoothness = 5f;
 
     public float currentSpeed;
+    public float horizontalInput;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        HandleMovement();
+        HandleSteering();
+    }
+
+    void HandleMovement()
+    {
+        float verticalInput = Input.GetAxisRaw("Vertical");
+
+        if (verticalInput > 0)
         {
             if (currentSpeed < 0)
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, 0, brakeDeceleration * Time.deltaTime);
+                // Brake before moving forward.
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed, 0f,
+                    brakeDeceleration * Time.deltaTime
+                );
             }
             else
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed, maxSpeed,
+                    acceleration * Time.deltaTime
+                );
             }
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (verticalInput < 0)
         {
             if (currentSpeed > 0)
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, brakeDeceleration * Time.deltaTime);
+                // Brake before reversing.
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed, 0f,
+                    brakeDeceleration * Time.deltaTime
+                );
             }
             else
             {
-                currentSpeed = Mathf.MoveTowards(currentSpeed, -maxSpeed, brakeDeceleration * Time.deltaTime);
+                currentSpeed = Mathf.MoveTowards(
+                    currentSpeed, -reverseSpeed,
+                    acceleration * Time.deltaTime
+                );
             }
         }
         else
         {
-            currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.deltaTime);
+            // Gradually slow down when no input is pressed.
+            currentSpeed = Mathf.MoveTowards(
+                currentSpeed, 0f,
+                deceleration * Time.deltaTime
+            );
         }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            horizontalInput = 0.3f;
-        }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            horizontalInput = -0.3f;
-        }
+        transform.Translate(
+            Vector3.forward * currentSpeed * Time.deltaTime,
+            Space.Self
+        );
+    }
 
-        transform.Translate(Vector3.right * currentSpeed * Time.deltaTime, Space.Self);
+    void HandleSteering()
+    {
+        float targetSteering = Input.GetAxisRaw("Horizontal");
 
-        transform.Translate(Vector3.forward * horizontalInput * 5f * Time.deltaTime, Space.Self);
+        horizontalInput = Mathf.MoveTowards(
+            horizontalInput,
+            targetSteering,
+            steeringSmoothness * Time.deltaTime
+        );
+
+        // Reduce steering while moving slowly.
+        float speedFactor = Mathf.Clamp01(
+            Mathf.Abs(currentSpeed) / 3f
+        );
+
+        // Reverse steering direction while reversing.
+        float reverseFactor = currentSpeed < 0 ? -1f : 1f;
+
+        transform.Rotate(
+            Vector3.up,
+            horizontalInput * steeringSpeed *
+            speedFactor * reverseFactor * Time.deltaTime
+        );
     }
 }
