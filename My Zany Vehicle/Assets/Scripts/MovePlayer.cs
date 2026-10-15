@@ -72,7 +72,7 @@ public class MovePlayer : MonoBehaviour
         }
 
         transform.Translate(
-            Vector3.forward * currentSpeed * Time.deltaTime,
+            Vector3.right * currentSpeed * Time.deltaTime,
             Space.Self
         );
     }
