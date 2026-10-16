@@ -87,18 +87,20 @@ public class MovePlayer : MonoBehaviour
             steeringSmoothness * Time.deltaTime
         );
 
-        // Reduce steering while moving slowly.
+        // Steering increases with speed, but stays controlled.
         float speedFactor = Mathf.Clamp01(
-            Mathf.Abs(currentSpeed) / 3f
+            Mathf.Abs(currentSpeed) / maxSpeed
         );
 
-        // Reverse steering direction while reversing.
+        // Reduce steering sensitivity at higher speeds.
+        float steeringFactor = Mathf.Lerp(0.25f, 1f, speedFactor);
+
         float reverseFactor = currentSpeed < 0 ? -1f : 1f;
 
         transform.Rotate(
             Vector3.up,
             horizontalInput * steeringSpeed *
-            speedFactor * reverseFactor * Time.deltaTime
+            steeringFactor * reverseFactor * Time.deltaTime
         );
     }
 }
