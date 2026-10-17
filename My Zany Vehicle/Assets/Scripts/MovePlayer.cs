@@ -6,6 +6,7 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] public float acceleration = 10f;
     [SerializeField] public float deceleration = 3f;
     [SerializeField] public float brakeDeceleration = 15f;
+    [SerializeField] public float horizontalInput = 0f;
 
     public float currentSpeed;
 
@@ -39,8 +40,18 @@ public class MovePlayer : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, deceleration * Time.deltaTime);
         }
 
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            horizontalInput = 0.3f;
+        }
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        {
+            horizontalInput = -0.3f;
+        }
+
         transform.Translate(Vector3.right * currentSpeed * Time.deltaTime, Space.Self);
 
+        transform.Translate(Vector3.forward * horizontalInput * 5f * Time.deltaTime, Space.Self);
 
         // float moveX = Input.GetAxis("Vertical");
         // float moveZ = Input.GetAxis("Horizontal");
