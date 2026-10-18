@@ -10,7 +10,7 @@ public class MovePlayer : MonoBehaviour
     public float reverseSpeed = 8f;
 
     [Header("Steering")]
-    public float steeringSpeed = 90f;
+    public float steeringSpeed = 60f;
     public float steeringSmoothness = 5f;
 
     public float currentSpeed;
